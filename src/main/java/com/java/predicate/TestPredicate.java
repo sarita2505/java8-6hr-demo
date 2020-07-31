@@ -17,6 +17,7 @@ public class TestPredicate {
         };
         System.out.println(m1.test(11));
     }
+
     public static void and(){
         Predicate<Integer> m1=(i)->{
             return i<10;

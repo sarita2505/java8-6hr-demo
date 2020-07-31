@@ -11,8 +11,8 @@ public class EmployeeMain {
     public static void main(String[] args) {
         //  Employee employee= Employee::new;
         //runnableBy7();
-        //runnableBy8();
-        comparotorBy8();
+        runnableBy8();
+        //comparotorBy8();
 
     }
 

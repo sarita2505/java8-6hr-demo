@@ -12,16 +12,17 @@ public class StreamMain {
     public static void main(String[] args) {
         //listOfStream();
         //listUsingConsumer();
-       // convertListToStream();
-       // consumer();
+        //convertListToStream();
+       consumer();
        // supplier();
-        biConsumer();
+       // biConsumer();
 
     }
 
     public static void listOfStream(){
         String[] strings=new String[]{"hari","ram","mita","gita","anki"};
         Stream<String> stream=Stream.of(strings);
+
         stream.forEach(elt->
                 System.out.println(elt)); {
 
@@ -42,10 +43,12 @@ public class StreamMain {
         list.add("anki");
         list.add("gopal");
         list.add("chinu");
-        list
-                .stream()
-                .forEach(c ->
-                        System.out.println(c));
+        Stream<String> stream=list.stream();
+        stream.forEach(elt-> System.out.println(elt));
+//        list
+//                .stream()
+//                .forEach(c ->
+//                        System.out.println(c));
 
     }
 
@@ -59,7 +62,7 @@ public class StreamMain {
         };
         Consumer<String> c = consumer.andThen(consumer1);
         list.stream().forEach(c);
-        c.accept("welcome");
+       // c.accept("welcome");
 
     }
     public static void supplier(){
